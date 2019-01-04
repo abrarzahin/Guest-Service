@@ -7,6 +7,14 @@ public class ChatOutMessage {
 	private String groupName;
 	private Date timestamp;
 	
+	
+	public ChatOutMessage() {
+		super();
+	}
+	public ChatOutMessage(String content) {
+		super();
+		this.content = content;
+	}
 	public String getContent() {
 		return content;
 	}

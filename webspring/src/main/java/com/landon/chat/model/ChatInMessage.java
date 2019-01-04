@@ -8,6 +8,13 @@ public class ChatInMessage {
 	private String message;
 	private Date timestamp;
 	
+	public ChatInMessage() {
+		super();
+	}
+	public ChatInMessage(String message) {
+		super();
+		this.message = message;
+	}
 	public String getSenderId() {
 		return senderId;
 	}
