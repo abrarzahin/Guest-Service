@@ -24,6 +24,12 @@ public class ChatController {
 	public ChatOutMessage handleUserIsTyping(ChatInMessage message)  throws Exception {
 		return new ChatOutMessage("Someone is typing...");
 	}
+     @MessageMapping("/guestjoin")
+	 @SendTo("/topic/guestnames")
+	 public ChatOutMessage handleMemberJoins(ChatInMessage message) throws Exception {
+	      return new ChatOutMessage(message.getMessage());
+	  }
+	    
 	@MessageExceptionHandler
 	@SendTo("/topic/errors")
 	public ChatOutMessage handleException(Throwable exception) {
